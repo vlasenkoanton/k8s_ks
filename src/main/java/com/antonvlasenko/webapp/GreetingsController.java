@@ -10,6 +10,6 @@ public class GreetingsController {
 
     @GetMapping
     public String hello() {
-        return "Привет SPD-шники. Шо вы?";
+        return "Привет SPD-шники! Шо вы?";
     }
 }
