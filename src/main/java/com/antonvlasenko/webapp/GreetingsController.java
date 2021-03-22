@@ -1,15 +1,25 @@
 package com.antonvlasenko.webapp;
 
+import org.springframework.boot.info.BuildProperties;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
 
-@RestController
-@RequestMapping("/hello")
+@Controller
+@RequestMapping("/")
 public class GreetingsController {
 
+    private final BuildProperties buildProperties;
+
+    public GreetingsController(BuildProperties buildProperties) {
+        this.buildProperties = buildProperties;
+    }
+
     @GetMapping
-    public String hello() {
-        return "Привет SPD-шники! Шо вы?";
+    public String greeting(Model model) {
+        String version = buildProperties.getVersion();
+        model.addAttribute("version", version);
+        return "greeting";
     }
 }
