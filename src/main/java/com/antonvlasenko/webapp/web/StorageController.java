@@ -1,6 +1,6 @@
-package com.antonvlasenko.webapp;
+package com.antonvlasenko.webapp.web;
 
-import com.antonvlasenko.webapp.dto.FileDto;
+import com.antonvlasenko.webapp.web.dto.FileDto;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;

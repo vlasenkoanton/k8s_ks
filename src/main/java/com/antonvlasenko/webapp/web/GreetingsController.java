@@ -1,4 +1,4 @@
-package com.antonvlasenko.webapp;
+package com.antonvlasenko.webapp.web;
 
 import org.springframework.boot.info.BuildProperties;
 import org.springframework.stereotype.Controller;

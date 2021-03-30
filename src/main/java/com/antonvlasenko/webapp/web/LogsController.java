@@ -1,4 +1,4 @@
-package com.antonvlasenko.webapp;
+package com.antonvlasenko.webapp.web;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;

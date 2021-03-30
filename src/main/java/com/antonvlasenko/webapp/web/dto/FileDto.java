@@ -1,4 +1,4 @@
-package com.antonvlasenko.webapp.dto;
+package com.antonvlasenko.webapp.web.dto;
 
 import lombok.Data;
 
