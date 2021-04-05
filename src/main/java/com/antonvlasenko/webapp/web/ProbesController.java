@@ -16,6 +16,13 @@ public class ProbesController {
 
     private final Map<ProbeType, Boolean> probeState = new ConcurrentHashMap<>();
 
+    @GetMapping("liveness")
+    public ResponseEntity<String> liveness() {
+        return getProbeState(ProbeType.LIVENESS)
+                ? ResponseEntity.ok("ok")
+                : ResponseEntity.status(HttpStatus.SERVICE_UNAVAILABLE).body("unavailable");
+    }
+
     @GetMapping("readiness")
     public ResponseEntity<String> readiness() {
         return getProbeState(ProbeType.READINESS)
